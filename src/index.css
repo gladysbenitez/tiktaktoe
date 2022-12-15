@@ -1,0 +1,368 @@
+*{box-sizing: border-box;}
+body { 
+position: absolute;
+width: 100%;
+height: 1345px; 
+display:flex; 
+justify-content:center; 
+align-items:center; 
+background-image: url( 'logo.svg' );
+} 
+.btn{ 
+  background-color: transparent;
+  font-family: 'Baskerville'; 
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 48px;
+  width: 90px; 
+  height: 80px; 
+  cursor: pointer;
+  position: relative;
+  top:0; 
+  position: relative;
+
+  
+}  
+.disabled .btn{
+  background-color: green;
+  top:0; 
+  padding: 0px; 
+
+}
+
+.btn:hover{ 
+  color:#201238; 
+}
+.btn-active{ 
+  background-color:aqua;
+
+}
+.btn-start{
+position: absolute;
+width: 642px;
+height: 236px;
+left: 922px;
+top: 788px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 900;
+font-size: 120px;
+line-height: 120px;
+/* or 100% */
+
+text-align: center;
+
+color: #FFFFFF;
+} 
+ 
+.game{
+  display:flex; 
+  flex-wrap:wrap;
+}  
+
+.game-info{ 
+  margin:15px; 
+  color:#ffffff; 
+} 
+.board > div{
+display: flex;
+}
+
+.header{
+  position: absolute; 
+  left: 47.5%;
+right: 47.9%;
+top: 57.45%;
+bottom: 40.98%;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #201238;
+  
+} 
+
+.pick-player{
+  position: absolute;
+  left: 45.43%;
+  right: 45.47%;
+  top: 66.17%;
+  bottom: 32.04%;
+
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 24px;
+
+color: #201238;
+
+} 
+.x{
+
+  position: absolute;
+  left: 45.6%;
+  right: 52.5%;
+  top: 76.45%;
+  bottom: 19.45%;
+  
+  font-family: 'Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 55px;
+  /* identical to box height */
+  
+  
+  color: #201238;
+}
+.o{ 
+  position: absolute;
+left: 52.54%;
+right: 45.46%;
+top: 76.45%;
+bottom: 19.45%;
+
+font-family: 'Baskerville';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 55px;
+/* identical to box height */
+
+color: #201238;
+
+} 
+.rectangle1{
+  position: absolute;
+  left: 45%;
+  right: 52%;
+  top: 80.92%;
+  bottom: 18.7%;
+  background: #D8D8D8;
+}   
+.rectangle1one{
+  position: absolute;
+  left: 45%;
+  right: 52%;
+  top: 80.92%;
+  bottom: 18.7%;
+  background: #5CB85C;
+}  
+.rectangle2{
+  position: absolute;
+  left: 52%;
+  right: 45%;
+  top: 80.92%;
+  bottom: 18.7%;
+
+  background: #D8D8D8;
+} 
+.rectangle2two{
+  position: absolute;
+  left: 52%;
+  right: 45%;
+  top: 80.92%;
+  bottom: 18.7%;
+
+  background: #5CB85C;
+} 
+.match-button{
+  position: absolute;
+left: 42.5%;
+right: 42.5%;
+top: 89.57%;
+bottom: 7.45%;
+
+background: #201238; 
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px; 
+color: #FFFFFF;
+} 
+.match-text{
+  position: absolute;
+left: 43.75%;
+right: 43.75%;
+top: 90.31%;
+bottom: 8.27%;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+} 
+/* @keyframes example {
+  0%{transform:translateY(450px)}
+  100% {transform:translateY(-1342px)}
+} */
+/* .toast{
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  position: absolute;
+left: 46.3%;
+right: 46.7%;
+top: 57.38%;
+bottom: 39.64%;
+background-color: #5CB85C;
+animation: example 2.4s ease;
+overflow: hidden; */
+
+
+/* font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+
+/* color: #FFFFFF;
+} */ */
+#toast {
+  visibility: hidden;
+  max-width: 50px;
+  height: 50px;
+  /*margin-left: -125px;*/
+  margin: auto;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+
+  position: fixed;
+  z-index: 1;
+  left: 0;right:0;
+  bottom: 30px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+#toast #img{
+width: 50px;
+height: 50px;
+  
+  float: left;
+  
+  padding-top: 16px;
+  padding-bottom: 16px;
+  
+  box-sizing: border-box;
+
+  
+  background-color: #111;
+  color: #fff;
+}
+#toast #desc{
+
+  
+  color: #fff;
+ 
+  padding: 16px;
+  
+  overflow: hidden;
+white-space: nowrap;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+  from {min-width: 50px} 
+  to {min-width: 350px}
+}
+
+@keyframes expand {
+  from {min-width: 50px}
+  to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+  from {min-width: 350px} 
+  to {min-width: 350px}
+}
+
+@keyframes stay {
+  from {min-width: 350px}
+  to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+  from {min-width: 350px;} 
+  to {min-width: 50px;}
+}
+
+@keyframes shrink {
+  from {min-width: 350px;} 
+  to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 60px; opacity: 0;}
+}  
+.block{  
+  position: relative;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center; 
+  background-color: #ffffff00
+  ;
+  font-size: 3rem;
+  font-weight: bold;
+  /* border: 3px solid black; */
+  transition: background 0.2s ease-in-out; 
+
+
+  
+}  
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
